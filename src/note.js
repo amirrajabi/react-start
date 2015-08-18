@@ -12,7 +12,7 @@ var Note = React.createClass({
         return this.style = {
             top : this.randomBetween(0, window.innerHeight - 260) + 'px',
             right : this.randomBetween(0, window.innerWidth - 200) + 'px',
-            transform : 'rotate('+ this.randomBetween(-15, 15) +'deg)'
+            transform : 'rotate('+ this.randomBetween(-10, 10) +'deg)'
         }
     },
 
@@ -147,7 +147,7 @@ var Board = React.createClass({
 
             { this.state.notes.map(this.eachNote) }
 
-            <button className="btn btn-sm btn-success glyphicon glyphicon-plus" onClick={this.add.bind(null, 'New Note!')} />
+            <button className="btn btn-success glyphicon glyphicon-plus add-btn" onClick={this.add.bind(null, 'New Note!')} />
 
         </div>)
     }
